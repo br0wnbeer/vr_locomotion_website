@@ -1,6 +1,7 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme='ananke' 
+title = 'VR Locomotion'
+subtitle = 'by Björn Welker'
+theme='github-style' 
  
  
