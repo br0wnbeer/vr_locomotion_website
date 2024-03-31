@@ -6,10 +6,24 @@
     <description>Recent content in Posts on VR Locomotion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Mar 2024 21:55:51 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 01:40:57 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Myidea</title>
+      <title>Results</title>
+      <link>http://localhost:1313/post/results/</link>
+      <pubDate>Mon, 01 Apr 2024 01:28:16 +0200</pubDate>
+      <guid>http://localhost:1313/post/results/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interaction</title>
+      <link>http://localhost:1313/post/interaction/</link>
+      <pubDate>Mon, 01 Apr 2024 01:27:56 +0200</pubDate>
+      <guid>http://localhost:1313/post/interaction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Presentation</title>
       <link>http://localhost:1313/post/myidea/</link>
       <pubDate>Sun, 31 Mar 2024 19:05:27 +0200</pubDate>
       <guid>http://localhost:1313/post/myidea/</guid>
@@ -20,7 +34,7 @@
       <link>http://localhost:1313/post/motivation/</link>
       <pubDate>Sat, 30 Mar 2024 21:49:56 +0100</pubDate>
       <guid>http://localhost:1313/post/motivation/</guid>
-      <description>Implementation of the locomotion mecanic</description>
+      <description>Implementation of the locomotion mechanic</description>
     </item>
     <item>
       <title>Idea</title>

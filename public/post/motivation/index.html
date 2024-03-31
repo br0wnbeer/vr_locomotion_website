@@ -18,7 +18,7 @@
 
     
     <meta name="description"
-  content="Implementation of the locomotion mecanic" />
+  content="Implementation of the locomotion mechanic" />
 <meta name="keywords"
   content='' />
 <meta name="robots" content="noodp" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Implementation Locomotion - VR Locomotion" />
 <meta name="twitter:description"
-  content="Implementation of the locomotion mecanic" />
+  content="Implementation of the locomotion mechanic" />
 <meta name="twitter:site" content="http://localhost:1313/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -38,7 +38,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Implementation Locomotion - VR Locomotion">
 <meta property="og:description"
-  content="Implementation of the locomotion mecanic" />
+  content="Implementation of the locomotion mechanic" />
 <meta property="og:url" content="http://localhost:1313/post/motivation/" />
 <meta property="og:site_name" content="Implementation Locomotion" />
 <meta property="og:image"
@@ -142,9 +142,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 31 Mar 2024 23:02:59 &#43;0200"
+                  Modified <relative-time datetime="Mon, 01 Apr 2024 01:40:57 &#43;0200"
                     class="no-wrap">
-                    Sun, 31 Mar 2024 23:02:59 &#43;0200</relative-time>
+                    Mon, 01 Apr 2024 01:40:57 &#43;0200</relative-time>
                   
                 </div>
               </div>
@@ -174,7 +174,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      1135 Words
+                      1171 Words
                     
 
                   </div>
@@ -186,10 +186,28 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><p>When statring the implmenation process I first looked is someone else had implemented a similar thing. As far as my reaseach concerns, there is no prior implementation of a locomotion method similar to mine. Although for the first step of my implemenation there were some tutorials concering the implemenation of a prjectile system. Implementing the projectile system also was my first step implementing the locomotion system.</p>
+                <article class="markdown-body entry-content container-lg"><p>When starting the implementation process I first looked is someone else had implemented a similar thing. As far as my research concerns, there is no prior implementation of a locomotion method similar to mine. Although for the first step of my implemenation there were some tutorials concerning the implementation of a projectile system. Implementing the projectile system also was my first step implementing the locomotion system.</p>
 <h2 id="projectile-system">Projectile System</h2>
-<p>For the implemenation of the projectile sytem I fist created a <strong>Prefab</strong> in Unity for my bullet.</p>
-<p><img src="../../post/rocket.png" alt="Rocket Prefab"></p>
+<p>For the implementation of the projectile system I fist created a <strong>Prefab</strong> in Unity for my bullet.</p>
+<center>
+    <figure  >
+        
+          <img src="../../post/rocket.png" alt="Rocket Prefab" />
+          
+          
+            <figcaption>
+              <p>
+              Rocket Prefab
+              
+                
+              
+              </p> 
+            </figcaption>
+        
+      </figure>
+      
+    
+    </center>
 <p>During development I chose this as a model for the bullet because it was easy to spot and just a simple way to represent of a rocket. How the rocket itself behaves is given in the following code. <a href="">See</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -279,12 +297,12 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
-<p>Here you can set the speed the rocket is moving as well as the strength and radius of the explosion given by the serialised fields. I also included two more field for an explosion sound as well as a explosion animation. For the explosion animation I used the <a href="https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325">Praticle Pack</a> from the Unity store a well as an free explosion sound from <a href="https://uppbeat.io/browse/sfx/explosions">upbeat.io</a>.</p>
+<p>Here you can set the speed the rocket is moving as well as the strength and radius of the explosion given by the Serialized fields. I also included two more field for an explosion sound as well as a explosion animation. For the explosion animation I used the <a href="https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325">Praticle Pack</a> from the Unity store a well as an free explosion sound from <a href="https://uppbeat.io/browse/sfx/explosions">upbeat.io</a>.</p>
 <h3 id="problems">Problems</h3>
-<p>Some problems I encountered here were to find a explosion force value that did not shoot the player up to high and is not so low that the player does not move at all. There also was alot of reading Unity documentation involved about functionalities that Unity allreay proviedes regading explosions.</p>
+<p>Some problems I encountered here were to find a explosion force value that did not shoot the player up to high and is not so low that the player does not move at all. There also was alot of reading Unity documentation involved about functionalities that Unity already provides regarding explosions.</p>
 <h2 id="ovr-camera-rig-locomotion">OVR Camera Rig Locomotion</h2>
-<p>After creating the Rocket as well its behaviour in the scnene my next step was to implement the locomotion itself. For this I turned on the Gravity on the OVR Camera Rig in the Scene and set the isTrigger value of the rigidbody to false.</p>
-<p>Then I started edting the Locomotion Technique class given to us by the professor and stated editing it to suit my needs.
+<p>After creating the Rocket as well its behavior in the scene my next step was to implement the locomotion itself. For this I turned on the Gravity on the OVR Camera Rig in the Scene and set the isTrigger value of the rigidbody to false.</p>
+<p>Then I started editing the Locomotion Technique class given to us by the professor and stated editing it to suit my needs.
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
@@ -509,27 +527,33 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<p>Due to the code being quite long I will give a short explination of every varriable I added :</p>
+<p>Due to the code being quite long I will give a short explanation of every variable I added :</p>
 <ul>
-<li>right/left_controller_prefab : Are Serialised Fields to get the current position of the controllers in world space, so that
+<li>right/left_controller_prefab : Are Serialized Fields to get the current position of the controllers in world space, so that
 I can initiate the rockets from them.</li>
-<li>rocket : This provides the sript with rocket prefab</li>
+<li>rocket : This provides the script with rocket prefab</li>
 <li>wind : Is a Audio Source to play a wind sound that prevent cyber sickness.</li>
 <li>NextFire : Is a counter that checks if the fire button has been pressed in the last seconds</li>
 <li>Parachute : Is a Prefab for a Parachute model.</li>
 </ul>
-<p>The functionalies that were added there :</p>
+<p>The functionalities that were added there :</p>
 <ul>
 <li>deploying a Parachute when you move your hands above your head while falling and slowing the fall , this was also added to prevent cyber sickness a bit more. (See Line 63-74)</li>
-<li>locking the rotation so that the player camera rig does not get tipped over by the explosions of the rockets. I also tried a straightening mecanisim, but it caused even more cyber sickness then only locking the rotation</li>
+<li>locking the rotation so that the player camera rig does not get tipped over by the explosions of the rockets. I also tried a straightening mechanism, but it caused even more cyber sickness then only locking the rotation</li>
 <li>launching rockets (See 77-87) with the press of the primary trigger button on the VR controller.</li>
 <li>adding a wind sound while moving, prevent cyber sickness as much as the locomotion method allows.</li>
-<li>haptic feedback when lanching a rocket</li>
+<li>haptic feedback when launching a rocket</li>
 </ul>
 <h3 id="problems-1">Problems</h3>
-<p>Some problems I encountered here were again finding out what Unity allready provides. Before adding the NextFire lock it also happend that a projectile would collide with another. This was of course fixed by adding this NextFire timer to the rocket shooting process. The process of trying to prevent cyber sickness with this kind of locomotion is quite hard as well due explosions being quite harsh in moving the player.</p>
+<p>Some problems I encountered here were again finding out what Unity already provides. Before adding the NextFire lock it also happened that a projectile would collide with another. This was of course fixed by adding this NextFire timer to the rocket shooting process. The process of trying to prevent cyber sickness with this kind of locomotion is quite hard as well due explosions being quite harsh in moving the player.</p>
 <h1 id="future">Future</h1>
-<p>I also tried about implement different kind of rockets that all had different kind of strenths of force pushing the player but afterwards decided against it due to finding no satisfing teqnique for such or editing the force value of the current rocket.</p>
+<p>I also tried about implement different kind of rockets that all had different kind of strengths of force pushing the player but afterwards decided against it due to finding no satisfying technique for such or editing the force value of the current rocket. One other thing that could be implemented would be to exchange the models for the controllers with real RPG model with a reload animation.</p>
+<p>After implementing everything the locomotion method can bee seen here:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/w1whl6D1MKo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 </article>
               </div>
             </div>
