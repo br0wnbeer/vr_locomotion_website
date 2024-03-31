@@ -1,23 +1,31 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'VR Locomotion'
-subtitle = 'by Björn Welker'
-theme='github-style' 
+baseURL = "https://meik2333.com/"
+languageCode = "zh-cn"
+title = "MeiK's blog"
+theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
- 
- [params]
-  author = "Björn Welker"
-  description = "Student of Visual Computing"
-  github = "br0wnbeer"
-  email = "bjoern.welker@gmail.com"
+pygmentsOptions =["cs"]
+
+[params]
+  author = "MeiK"
+  description = "In solitude, where we are least alone."
+  github = "MeiK2333"
+  facebook = "MeiK2333"
+  twitter = "MeiK2333"
+  linkedin = "MeiK2333"
+  instagram = "MeiK2333"
+  tumblr = "MeiK2333"
+  email = "meik2333@gmail.com"
+  url = "https://meik2333.com"
+  keywords = "blog, google analytics"
+  rss = true
   lastmod = true
-  userStatusEmoji = ""
+  userStatusEmoji = "😀"
   favicon = "/images/github.png"
   avatar = "/images/avatar.png"
   headerIcon = "/images/GitHub-Mark-Light-32px.png"
-  location = "Germany"
-  enableGitalk = false
+  location = "China"
+  enableGitalk = true
 
   [params.gitalk]
     clientID = "Your client ID"

@@ -6,21 +6,28 @@
     <description>Recent content on VR Locomotion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Mar 2024 21:49:56 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2024 23:02:59 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Motivation</title>
+      <title>Myidea</title>
+      <link>http://localhost:1313/post/myidea/</link>
+      <pubDate>Sun, 31 Mar 2024 19:05:27 +0200</pubDate>
+      <guid>http://localhost:1313/post/myidea/</guid>
+      <description>This is a post</description>
+    </item>
+    <item>
+      <title>Implementation Locomotion</title>
       <link>http://localhost:1313/post/motivation/</link>
       <pubDate>Sat, 30 Mar 2024 21:49:56 +0100</pubDate>
       <guid>http://localhost:1313/post/motivation/</guid>
-      <description>Lore Ipsum</description>
+      <description>Implementation of the locomotion mecanic</description>
     </item>
     <item>
       <title>Idea</title>
       <link>http://localhost:1313/post/idea/</link>
       <pubDate>Sat, 30 Mar 2024 19:33:41 +0100</pubDate>
       <guid>http://localhost:1313/post/idea/</guid>
-      <description>The Idea to create a locomotion and interaction method came form my Univerestey course (Interaction in VR and AR). They tasked us to implement such a meht</description>
+      <description>main idea</description>
     </item>
   </channel>
 </rss>

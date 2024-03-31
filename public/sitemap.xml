@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/post/motivation/</loc>
-    <lastmod>2024-03-30T21:49:56+01:00</lastmod>
+    <loc>http://localhost:1313/post/myidea/</loc>
+    <lastmod>2024-03-31T19:06:26+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-03-30T21:49:56+01:00</lastmod>
+    <lastmod>2024-03-31T21:55:51+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-03-30T21:49:56+01:00</lastmod>
+    <lastmod>2024-03-31T21:55:51+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/motivation/</loc>
+    <lastmod>2024-03-31T21:55:51+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/idea/</loc>
-    <lastmod>2024-03-30T19:33:41+01:00</lastmod>
+    <lastmod>2024-03-31T19:06:54+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
