@@ -194,7 +194,7 @@ The functionalities that were added there :
  * locking the rotation so that the player camera rig does not get tipped over by the explosions of the rockets. I also tried a straightening mechanism, but it caused even more cyber sickness then only locking the rotation. 
  * launching rockets (See 77-87) with the press of the primary trigger button on the VR controller.
  * adding a wind sound while moving, prevent cyber sickness as much as the locomotion method allows.
- * haptic feedback when launching a rocket. 
+ * haptic feedback when launching a projectile, due not being super light and by that not being really interesting for representing a rocket launching  
 
  ### Problems 
  Some problems I encountered here were again finding out what Unity already provides. Before adding the NextFire lock it also happened that a projectile would collide with another. This was of course fixed by adding this NextFire timer to the rocket shooting process. The process of trying to prevent cyber sickness with this kind of locomotion is quite hard as well due explosions being quite harsh in moving the player.
