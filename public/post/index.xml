@@ -6,14 +6,14 @@
     <description>Recent content in Posts on VR Locomotion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2024 18:02:36 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 18:06:21 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Results</title>
       <link>http://localhost:1313/post/results/</link>
       <pubDate>Mon, 01 Apr 2024 01:28:16 +0200</pubDate>
       <guid>http://localhost:1313/post/results/</guid>
-      <description>Evaluation After allot of testing the locomotion method with my roommates, I can conclude with quite a high certainty that. The locomotion method itself is not the best in reducing cyber sickness. On the other hand all my &amp;ldquo;test subjects&amp;rdquo; said even though, the method produces cyber sickness the locomotion method is quite fun to play around with. It also might be worth mentioning that I introduced some Dynamic Gaussian Blur and a Dynamic FOV (after testing does not really seem to be working out of the box) from GingerVR in the end to reduce this sickness to a maximum.</description>
+      <description>My results and POV</description>
     </item>
     <item>
       <title>Interaction</title>

@@ -6,3 +6,9 @@ draft = false
 # Locomotion and Interaction Idea 
 
 {{< youtube w1whl6D1MKo>}}
+
+Read : 
+ 1. Idea 
+ 2. Locomotion 
+ 3. Interaction 
+ 4. Results
