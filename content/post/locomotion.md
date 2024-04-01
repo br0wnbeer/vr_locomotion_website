@@ -4,6 +4,7 @@ date = 2024-03-30T21:49:56+01:00
 draft = false
 summary = "Implementation of the locomotion mechanic"
 +++
+# Introduction
 When starting the implementation process I first looked is someone else had implemented a similar thing. As far as my research concerns, there is no prior implementation of a locomotion method similar to mine. Although for the first step of my implemenation there were some tutorials concerning the implementation of a projectile system. Implementing the projectile system also was my first step implementing the locomotion system. 
 
 ## Projectile System 
@@ -12,7 +13,7 @@ For the implementation of the projectile system I fist created a **Prefab** in U
 
 {{<img1 src = "../../post/rocket.png" caption = "Rocket Prefab">}}
 
-During development I chose this as a model for the bullet because it was easy to spot and just a simple way to represent of a rocket. How the rocket itself behaves is given in the following code. [See]()
+During development I chose this as a model for the bullet because it was easy to spot and just a simple way to represent of a rocket. This then later also stayed like that do to my blender skills just not being the best.  How the rocket itself behaves is given in the following code. 
 
 {{< highlight csharp "linenos=table,hl_lines=8 15-17,linenostart=1" >}}
     public class rocket_behaviour : MonoBehaviour
@@ -26,7 +27,7 @@ During development I chose this as a model for the bullet because it was easy to
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Init speed and rotation of the bullet 
         GetComponent<Rigidbody>().AddForce(transform.forward * speed, ForceMode.Impulse);
         transform.rotation = Quaternion.Euler(90,0,0);
     }
@@ -38,14 +39,15 @@ During development I chose this as a model for the bullet because it was easy to
     }
 
     private void OnCollisionEnter(Collision other)
-    {
+    { 
+        // Collision with other object in the scene 
         Collider[] colliders = Physics.OverlapSphere(transform.position, 20f);
         foreach (Collider c in colliders)
         {
             Rigidbody rigidbody = c.GetComponent<Rigidbody>();
             if (rigidbody != null)
             {
-                
+                // Explosion animation , force and sound added
                 rigidbody.AddExplosionForce(strength, transform.position, radius, 3.0f);
                 Destroy(this.gameObject);
                 var hit = Instantiate(explosion, transform.position, transform.rotation);
@@ -58,12 +60,12 @@ During development I chose this as a model for the bullet because it was easy to
 }
 {{< / highlight >}}
 
-Here you can set the speed the rocket is moving as well as the strength and radius of the explosion given by the Serialized fields. I also included two more field for an explosion sound as well as a explosion animation. For the explosion animation I used the [Praticle Pack](https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325) from the Unity store a well as an free explosion sound from [upbeat.io](https://uppbeat.io/browse/sfx/explosions).
+Here you can set the speed the rocket is moving as well as the strength and radius of the explosion given by the Serialized fields. I also included two more field for an explosion sound as well as a explosion animation. For the explosion animation I used the [Particle Pack](https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325) from the Unity store a well as an free explosion sound from [upbeat.io](https://uppbeat.io/browse/sfx/explosions).
 ### Problems 
-Some problems I encountered here were to find a explosion force value that did not shoot the player up to high and is not so low that the player does not move at all. There also was alot of reading Unity documentation involved about functionalities that Unity already provides regarding explosions. 
+Some problems I encountered here were to find a explosion force value that did not shoot the player up to high and is not so low that the player does not move at all. There also was allot of reading Unity documentation involved about functionalities that Unity already provides regarding explosions. 
 
 ## OVR Camera Rig Locomotion
-After creating the Rocket as well its behavior in the scene my next step was to implement the locomotion itself. For this I turned on the Gravity on the OVR Camera Rig in the Scene and set the isTrigger value of the rigidbody to false. 
+After creating the Rocket as well its behavior in the scene my next step was to implement the locomotion itself. For this I turned on the Gravity on the OVR Camera Rig in the Scene and set the isTrigger value of the Rigidbody to false. 
 
 Then I started editing the Locomotion Technique class given to us by the professor and stated editing it to suit my needs.
 {{< highlight csharp "linenos=table,hl_lines=8 15-17,linenostart=1" >}}
@@ -97,6 +99,7 @@ public class LocomotionTechnique : MonoBehaviour
     private Rigidbody rb;
     void Start()
     {
+        // Init some values for later use 
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         parachute.SetActive(false);
@@ -111,7 +114,7 @@ public class LocomotionTechnique : MonoBehaviour
         
         leftTriggerValue = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, leftController); 
         rightTriggerValue = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, rightController);
-        
+        // Wind sound when moving to reduce cyber sickness
         if (rb.velocity.magnitude >= 1 && !wind.isPlaying)
         {
             
@@ -128,7 +131,7 @@ public class LocomotionTechnique : MonoBehaviour
         {
             
         }
-        
+        // Parachute technique with hands over head 
         if (hmd.transform.position.y <= left_controller_prefab.transform.position.y 
             && hmd.transform.position.y <= right_controller_prefab.transform.position.y 
             && rb.velocity.y < 0.2)
@@ -143,19 +146,19 @@ public class LocomotionTechnique : MonoBehaviour
         }
         
         
-        if (rightTriggerValue >= 0.95f && (Time.time > NextFire))
+        if (rightTriggerValue >= 0.95f && (Time.time > NextFire)) // Fire with right trigger
         {
             NextFire = Time.time + .5f;
             LaunchRocket(right_controller_prefab);
         }
         
-        if (leftTriggerValue >= 0.95f && (Time.time > NextFire))
+        if (leftTriggerValue >= 0.95f && (Time.time > NextFire)) // Fire with left trigger
         {
             NextFire = Time.time + .5f;
             LaunchRocket(left_controller_prefab);
         }
-        
-        if (OVRInput.Get(OVRInput.Button.Two) || OVRInput.Get(OVRInput.Button.Four))
+        // Original Game mechanic
+        if (OVRInput.Get(OVRInput.Button.Two) || OVRInput.Get(OVRInput.Button.Four)) 
         {
             if (parkourCounter.parkourStart)
             {
@@ -165,7 +168,7 @@ public class LocomotionTechnique : MonoBehaviour
     }
 
 
-
+    // Function that launches rocket from a given hand 
     void LaunchRocket(GameObject hand)
     {
         GameObject projectile = Instantiate(rocket, 
@@ -181,24 +184,24 @@ public class LocomotionTechnique : MonoBehaviour
 Due to the code being quite long I will give a short explanation of every variable I added :
  * right/left_controller_prefab : Are Serialized Fields to get the current position of the controllers in world space, so that
  I can initiate the rockets from them. 
- * rocket : This provides the script with rocket prefab 
+ * rocket : This provides the script with rocket prefab .
  * wind : Is a Audio Source to play a wind sound that prevent cyber sickness.
- * NextFire : Is a counter that checks if the fire button has been pressed in the last seconds 
+ * NextFire : Is a counter that checks if the fire button has been pressed in the last seconds.
  * Parachute : Is a Prefab for a Parachute model.
  
 The functionalities that were added there :
  * deploying a Parachute when you move your hands above your head while falling and slowing the fall , this was also added to prevent cyber sickness a bit more. (See Line 63-74)
- * locking the rotation so that the player camera rig does not get tipped over by the explosions of the rockets. I also tried a straightening mechanism, but it caused even more cyber sickness then only locking the rotation 
+ * locking the rotation so that the player camera rig does not get tipped over by the explosions of the rockets. I also tried a straightening mechanism, but it caused even more cyber sickness then only locking the rotation. 
  * launching rockets (See 77-87) with the press of the primary trigger button on the VR controller.
  * adding a wind sound while moving, prevent cyber sickness as much as the locomotion method allows.
- * haptic feedback when launching a rocket 
+ * haptic feedback when launching a rocket. 
 
  ### Problems 
- Some problems I encountered here were again finding out what Unity already provides. Before adding the NextFire lock it also happened that a projectile would collide with another. This was of course fixed by adding this NextFire timer to the rocket shooting process. The process of trying to prevent cyber sickness with this kind of locomotion is quite hard as well due explosions being quite harsh in moving the player. 
+ Some problems I encountered here were again finding out what Unity already provides. Before adding the NextFire lock it also happened that a projectile would collide with another. This was of course fixed by adding this NextFire timer to the rocket shooting process. The process of trying to prevent cyber sickness with this kind of locomotion is quite hard as well due explosions being quite harsh in moving the player.
 
 
  # Future 
- I also tried about implement different kind of rockets that all had different kind of strengths of force pushing the player but afterwards decided against it due to finding no satisfying technique for such or editing the force value of the current rocket. One other thing that could be implemented would be to exchange the models for the controllers with real RPG model with a reload animation.
+ I also tried about implement different kind of rockets that all had different kind of strengths of force pushing the player but afterwards decided against it due to finding no satisfying technique for such or editing the force value of the current rocket. One other thing that could be implemented would be to exchange the models for the controllers with real "Rocket Launcher" model with a reload animation.
 
  
 After implementing everything the locomotion method can bee seen here: 
