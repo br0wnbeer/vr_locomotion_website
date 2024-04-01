@@ -7,9 +7,10 @@ summary = "Main Concept"
 # Introduction
 The Idea to create a locomotion and interaction method came form my University course (Interaction in VR and AR). They tasked us to implement such  methods in Unity in VR using the Meta Quest 2. 
 # My Locomotion Idea
-My Idea was it to implemt a locomotion technique the was inspired by the locomotion technique that was introduced in [Team Fortress II](https://www.teamfortress.com/) by a class called the [*Soldier*](https://wiki.teamfortress.com/wiki/Soldier). The locomotion technique involves the character moving by launching rockets so that the explosion force moves the character itself. An example of this kind of locomotion can be seen [here](https://www.youtube.com/watch?v=fsf0M-lzGUo).
+My Idea was it to implement  a locomotion technique the was inspired by the locomotion technique that was introduced in [Team Fortress II](https://www.teamfortress.com/) by a class called the [*Soldier*](https://wiki.teamfortress.com/wiki/Soldier). This technique involves , the character moving by launching rockets so that the explosion force moves the character itself. An example of this kind of locomotion can be found  [here](https://www.youtube.com/watch?v=fsf0M-lzGUo).
 {{< youtube fsf0M-lzGUo >}}
-For my implementation I wanted to reduce the amount of vection that is introduced to the player, trying to prevent cyber sickness. If I implemented my method in the same way it was, the vection would have been very high. For this I came up with a few ideas to prevent/lower it: 
+For my implementation I wanted to reduce the amount of vection that is introduced to the player, trying to prevent cyber sickness. 
+If I implemented the locomotion in the same way it was presented in Team Fortress II, the perceived motion would have been verry high. To prevent this I came up with a few ideas to prevent/lower it: 
 
 * reducing the amount of push each explosion gives to player 
 * introducing some wind to the player to give a perception of motion in real life

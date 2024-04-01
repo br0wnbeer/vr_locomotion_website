@@ -142,9 +142,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 19:58:23 &#43;0200"
+                  Modified <relative-time datetime="Mon, 01 Apr 2024 22:26:20 &#43;0200"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 19:58:23 &#43;0200</relative-time>
+                    Mon, 01 Apr 2024 22:26:20 &#43;0200</relative-time>
                   
                 </div>
               </div>
@@ -174,7 +174,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      1279 Words
+                      1362 Words
                     
 
                   </div>
@@ -187,7 +187,7 @@
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
                 <article class="markdown-body entry-content container-lg"><h1 id="introduction">Introduction</h1>
-<p>When starting the implementation process I first looked is someone else had implemented a similar thing. As far as my research concerns, there is no prior implementation of a locomotion method similar to mine. Although for the first step of my implemenation there were some tutorials concerning the implementation of a projectile system. Implementing the projectile system also was my first step implementing the locomotion system.</p>
+<p>When starting the implementation process I first looked if someone else had implemented a similar thing in Unity before. As far as my research concerns, there was no prior implementation of a locomotion method similar to mine. Anyway for the first step of my implementation ,I found some tutorials implementing projectile system. By default this also became my first step then too.</p>
 <h2 id="projectile-system">Projectile System</h2>
 <p>For the implementation of the projectile system I fist created a <strong>Prefab</strong> in Unity for my bullet.</p>
 <center>
@@ -300,9 +300,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
-<p>Here you can set the speed the rocket is moving as well as the strength and radius of the explosion given by the Serialized fields. I also included two more field for an explosion sound as well as a explosion animation. For the explosion animation I used the <a href="https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325">Particle Pack</a> from the Unity store a well as an free explosion sound from <a href="https://uppbeat.io/browse/sfx/explosions">upbeat.io</a>.</p>
+<p>Here you can set the speed the rocket is moving as well as the strength and radius of the explosion given by the Serialized fields. I also included two more field for an explosion sound as well as a explosion animation. For the explosion animation I used the <a href="https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325">Particle Pack</a> from the Unity store a well as an free explosion sound from <a href="https://uppbeat.io/browse/sfx/explosions">upbeat.io</a>. I tried to write my code in a way that it is quite self explanatory, this is the reason for not further going into an explanation here.</p>
 <h3 id="problems">Problems</h3>
-<p>Some problems I encountered here were to find a explosion force value that did not shoot the player up to high and is not so low that the player does not move at all. There also was allot of reading Unity documentation involved about functionalities that Unity already provides regarding explosions.</p>
+<p>Some problems I encountered with the projectile system were to find a explosion force value that did not shoot the player up to high and is not so low that the player does not move at all. There also was allot of reading Unity documentation involved about functionalities that Unity already provides regarding explosions. This resulted in allot of time being lost to finding the right Unity functionality.</p>
 <h2 id="ovr-camera-rig-locomotion">OVR Camera Rig Locomotion</h2>
 <p>After creating the Rocket as well its behavior in the scene my next step was to implement the locomotion itself. For this I turned on the Gravity on the OVR Camera Rig in the Scene and set the isTrigger value of the Rigidbody to false.</p>
 <p>Then I started editing the Locomotion Technique class given to us by the professor and stated editing it to suit my needs.
@@ -531,8 +531,9 @@
 </span></span><span class="line"><span class="cl">    <span class="p">...</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
-</div></p>
-<p>Due to the code being quite long I will give a short explanation of every variable I added :</p>
+</div>
+This Code does not explain itself thats why I tried to come up with a short form explanation in bullet points.</p>
+<p>Here I will give a short explanation of every variable I added to the locomotion script :</p>
 <ul>
 <li>right/left_controller_prefab : Are Serialized Fields to get the current position of the controllers in world space, so that
 I can initiate the rockets from them.</li>
@@ -547,12 +548,12 @@ I can initiate the rockets from them.</li>
 <li>locking the rotation so that the player camera rig does not get tipped over by the explosions of the rockets. I also tried a straightening mechanism, but it caused even more cyber sickness then only locking the rotation.</li>
 <li>launching rockets (See 77-87) with the press of the primary trigger button on the VR controller.</li>
 <li>adding a wind sound while moving, prevent cyber sickness as much as the locomotion method allows.</li>
-<li>haptic feedback when launching a projectile, due not being super light and by that not being really interesting for representing a rocket launching</li>
+<li>haptic feedback when launching a projectile, due not being super light and by that not being really interesting for representing a rocket launching.</li>
 </ul>
 <h3 id="problems-1">Problems</h3>
 <p>Some problems I encountered here were again finding out what Unity already provides. Before adding the NextFire lock it also happened that a projectile would collide with another. This was of course fixed by adding this NextFire timer to the rocket shooting process. The process of trying to prevent cyber sickness with this kind of locomotion is quite hard as well due explosions being quite harsh in moving the player.</p>
 <h1 id="future">Future</h1>
-<p>I also tried about implement different kind of rockets that all had different kind of strengths of force pushing the player but afterwards decided against it due to finding no satisfying technique for such or editing the force value of the current rocket. One other thing that could be implemented would be to exchange the models for the controllers with real &ldquo;Rocket Launcher&rdquo; model with a reload animation.</p>
+<p>I also tried about implement different kind of rockets that all had different kind of strengths of force pushing the player but afterwards decided against it due to finding no satisfying technique for such or editing the force value of the current rocket. One other thing that could be implemented would be to exchange the models for the controllers with real &ldquo;Rocket Launcher&rdquo; model with a reload animation. A good version for haptic feedback would be nice to have in the future too. This could lead to even more immersive game play.</p>
 <p>After implementing everything the locomotion method looks the following way:</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
