@@ -204,7 +204,7 @@ The functionalities that were added there :
  I also tried about implement different kind of rockets that all had different kind of strengths of force pushing the player but afterwards decided against it due to finding no satisfying technique for such or editing the force value of the current rocket. One other thing that could be implemented would be to exchange the models for the controllers with real "Rocket Launcher" model with a reload animation.
 
  
-After implementing everything the locomotion method can bee seen here: 
+After implementing everything the locomotion method looks the following way: 
 
 {{< youtube w1whl6D1MKo>}}
 
