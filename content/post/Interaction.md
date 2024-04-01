@@ -179,7 +179,7 @@ The controls for the shooting are:
 
 
 ## Problems 
-Some bugs I encountered here are, the game crashing after stating or ending the task because the game object that was in the selected did not exist any more. Another hiccup that is worth mentioning is that the task stated multiple times before introducing the start bool variable. I also had to remove the Grab mechanic from the right controller because it was always interfering with the accuracy of the selection method. This was due to the script always being call when one of the thumb buttons had been pressed ( both hands shooting). This could also have been fixed by providing the line 3 with of the prior code segment with the current controller.
+Some bugs I encountered here are, the game crashing after stating or ending the task because the game object that was in the selected did not exist any more. Another hiccup that is worth mentioning is that the task stated multiple times before introducing a check for if the task is stated already. The before mentioned bug can be seen in the video. I also had to remove the Grab mechanic from the right controller because it was always interfering with the accuracy of the selection method. This was due to the script always being call when one of the thumb buttons had been pressed ( both hands shooting). This could also have been fixed by providing the line 3 with of the prior code segment with the current controller.
 
 {{<youtube e8jWBLISXuo>}}
 # Interaction Method Video 
