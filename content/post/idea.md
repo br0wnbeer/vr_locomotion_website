@@ -2,7 +2,7 @@
 title = 'Idea'
 date = 2024-03-30T19:33:41+01:00
 draft = false
-summary = "main idea"
+summary = "Main Concept"
 +++
 # Introduction
 The Idea to create a locomotion and interaction method came form my University course (Interaction in VR and AR). They tasked us to implement such  methods in Unity in VR using the Meta Quest 2. 

@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VR Locomotion</title>
-    <link>http://localhost:65167/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on VR Locomotion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2024 19:30:53 +0200</lastBuildDate>
-    <atom:link href="http://localhost:65167/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Apr 2024 19:49:36 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Results</title>
-      <link>http://localhost:65167/post/results/</link>
+      <link>http://localhost:1313/post/results/</link>
       <pubDate>Mon, 01 Apr 2024 01:28:16 +0200</pubDate>
-      <guid>http://localhost:65167/post/results/</guid>
+      <guid>http://localhost:1313/post/results/</guid>
       <description>My results and POV</description>
     </item>
     <item>
       <title>Interaction</title>
-      <link>http://localhost:65167/post/interaction/</link>
+      <link>http://localhost:1313/post/interaction/</link>
       <pubDate>Mon, 01 Apr 2024 01:27:56 +0200</pubDate>
-      <guid>http://localhost:65167/post/interaction/</guid>
+      <guid>http://localhost:1313/post/interaction/</guid>
       <description>Implementation of the interaction mechanic</description>
     </item>
     <item>
       <title>Presentation</title>
-      <link>http://localhost:65167/post/presentation/</link>
+      <link>http://localhost:1313/post/presentation/</link>
       <pubDate>Sun, 31 Mar 2024 19:05:27 +0200</pubDate>
-      <guid>http://localhost:65167/post/presentation/</guid>
-      <description>This is a post</description>
+      <guid>http://localhost:1313/post/presentation/</guid>
+      <description>Presentation for the VR Project</description>
     </item>
     <item>
       <title>Readme</title>
-      <link>http://localhost:65167/readme/</link>
+      <link>http://localhost:1313/readme/</link>
       <pubDate>Sun, 31 Mar 2024 18:39:17 +0200</pubDate>
-      <guid>http://localhost:65167/readme/</guid>
+      <guid>http://localhost:1313/readme/</guid>
       <description>Locomotion and Interaction Idea Read :&#xA;Idea Locomotion Interaction Results </description>
     </item>
     <item>
       <title>Implementation Locomotion</title>
-      <link>http://localhost:65167/post/locomotion/</link>
+      <link>http://localhost:1313/post/locomotion/</link>
       <pubDate>Sat, 30 Mar 2024 21:49:56 +0100</pubDate>
-      <guid>http://localhost:65167/post/locomotion/</guid>
+      <guid>http://localhost:1313/post/locomotion/</guid>
       <description>Implementation of the locomotion mechanic</description>
     </item>
     <item>
       <title>Idea</title>
-      <link>http://localhost:65167/post/idea/</link>
+      <link>http://localhost:1313/post/idea/</link>
       <pubDate>Sat, 30 Mar 2024 19:33:41 +0100</pubDate>
-      <guid>http://localhost:65167/post/idea/</guid>
-      <description>main idea</description>
+      <guid>http://localhost:1313/post/idea/</guid>
+      <description>Main Concept</description>
     </item>
   </channel>
 </rss>
