@@ -15,7 +15,7 @@ produces cyber sickness the locomotion method is quite fun to play around with. 
 For the results for the metrics recorded in from the parkour itself all seem to be related to how much the participant had already played the game before. Both the collecting of coins became better and better as well as the metric for the interaction task. 
 
 In general you might say this locomotion method is very fun but produces allot of cyber sickness. Contrary to the interaction that produces no cyber sickness at all but takes allot of getting used to. 
-For me the whole implementation process as well as getting a first contact point to VR and Unity in general was super interesting and fulfilling for me. In most other classes, the focus is more on the theoretical site and due to this being a project gave me a whole other perspective on my field of study.
+For me the whole implementation process as well as getting a first contact point to VR and Unity in general was super interesting and fulfilling for me. In most other classes, the focus is more on the theoretical site and due to this being a project gave me a whole other perspective on my field of study. 
 
 # Future Work  
 
